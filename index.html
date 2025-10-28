@@ -1,30 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Realtime Chat</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="/style.css" />
-  <script src="/socket.io/socket.io.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Sharing & Tagging App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <aside class="sidebar">
-      <h2>Users</h2>
-      <ul id="users"></ul>
-    </aside>
-    <main class="chat">
-      <header class="chat-header">
-        <h1>Realtime Chat</h1>
-        <div id="typingIndicator" class="typing"></div>
-      </header>
-      <ul id="messages" class="messages"></ul>
-      <form id="messageForm" class="message-form">
-        <input id="messageInput" autocomplete="off" placeholder="Type a message..." />
-        <button type="submit">Send</button>
-      </form>
-    </main>
-  </div>
-  <script src="/script.js"></script>
+  <header>
+    <h1>📸 Photo Sharing & Tagging Application</h1>
+  </header>
+
+  <main>
+    <section class="upload-section">
+      <h2>Upload a Photo</h2>
+      <input type="file" id="photoInput" accept="image/*">
+      <button id="uploadBtn">Upload</button>
+    </section>
+
+    <section class="photo-section">
+      <div class="photo-container">
+        <img id="uploadedPhoto" alt="Uploaded Photo" />
+      </div>
+    </section>
+
+    <section class="tags-section">
+      <h2>Tags</h2>
+      <ul id="tagList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for your photo memories</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
